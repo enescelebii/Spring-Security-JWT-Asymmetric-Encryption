@@ -25,7 +25,6 @@ import static jakarta.persistence.GenerationType.UUID;
 @Setter
 @Builder
 @RequiredArgsConstructor
-@NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "USERS")
 @EntityListeners(AuditingEntityListener.class)

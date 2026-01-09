@@ -1,6 +1,8 @@
 package com.vena.app.exception;
 
+import lombok.Getter;
 
+@Getter
 public class BusinessException extends RuntimeException {
 
     private final ErrorCode errorCode;

@@ -96,7 +96,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
     }
 
     private void checkUserPhoneNumber(String phoneNumber) {
-        final boolean phoneNumberExists = this.userRepository.existByPhoneNumber(phoneNumber);
+        final boolean phoneNumberExists = this.userRepository.existsByPhoneNumber(phoneNumber);
         if (phoneNumberExists){
             throw new BusinessException(PHONE_NUMBER_ALREADY_EXISTS);
         }

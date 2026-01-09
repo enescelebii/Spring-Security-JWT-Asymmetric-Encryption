@@ -17,14 +17,15 @@ import lombok.*;
 public class RegistrationRequest {
 
     @NotBlank(message = "VALIDATION.REGISTRATION.FIRSTNAME.NOT_BLANK")
-    @Size(min = 5, max = 50, message = "VALIDATION.REGISTRATION.FIRSTNAME.SIZE")
+    @Size(min = 3, max = 50, message = "VALIDATION.REGISTRATION.FIRSTNAME.SIZE")
     @Pattern(regexp = "^[\\p{L} '-]+$", message = "VALIDATION.REGISTRATION.FIRSTNAME.PATTERN")
     @Schema(example = "Enes")
     private String firstName;
 
     @NotBlank(message = "VALIDATION.REGISTRATION.LASTNAME.NOT_BLANK")
-    @Size(min = 5, max = 50, message = "VALIDATION.REGISTRATION.LASTNAME.SIZE")
+    @Size(min = 3, max = 50, message = "VALIDATION.REGISTRATION.LASTNAME.SIZE")
     @Pattern(regexp = "^[\\p{L} '-]+$", message = "VALIDATION.REGISTRATION.LASTNAME.PATTERN")
+    @Schema(example = "Çelebi")
     private String lastName;
 
     @NotBlank(message = "VALIDATION.REGISTRATION.EMAIL.NOT_BLANK")
