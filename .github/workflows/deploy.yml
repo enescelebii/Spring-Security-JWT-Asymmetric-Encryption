@@ -74,10 +74,10 @@ jobs:
         run: |
           echo "VERSION=$(./mvnw -q -Dexec.executable='echo' -Dexec.args='${project.version}' --non-recursive exec:exec)" >> $GITHUB_OUTPUT
 
-      - name: Build appliction
+      - name: Build application
         run: ./mvnw clean package -DskipTests
 
-      # Build and push Docker image with Buildx (don't push on PR)')
+      # Build and push the Docker image with Buildx (don't push on PR)
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
@@ -109,7 +109,7 @@ jobs:
           username: ${{ secrets.VPS_USERNAME }}
           key: ${{ secrets.VPS_SSH_KEY }}
           port: ${{ secrets.VPS_PORT }}
-          passphrase: ${{ secrets.VPS_SSH_KEY_PASSPHRASE }}
+          #  passphrase: ${{ secrets.VPS_SSH_KEY_PASSPHRASE }} we do not have a passphrase
           script: |
             # Navigate to app directory 
             cd /opt/${{ env.APP_NAME }} || mkdir -p /opt/${{ env.APP_NAME }} && cd /opt/${{ env.APP_NAME }}
