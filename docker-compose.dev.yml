@@ -6,7 +6,7 @@ services:
     environment:
       - DB_URL=spring_sec_asym_enc
       - DB_PORT=5432
-       - DB_NAME=${PG_DB_NAME}
+      - DB_NAME=${PG_DB_NAME}
       - DB_USERNAME=${PG_DB_USERNAME}
       - DB_PASSWORD=${PG_DB_PASSWORD}
     depends_on:

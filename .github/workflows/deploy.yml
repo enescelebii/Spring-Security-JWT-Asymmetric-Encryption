@@ -103,7 +103,10 @@ jobs:
           context: . # dot means root directory
           pull: true
           tags: |
+            # 1. Tag: Versiyonlu (Arşivleme ve geri dönebilmek için)
             ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.APP_NAME }}:${{ steps.extract_version.outputs.VERSION }}
+            # 2. Tag: Latest (Sunucunun her zaman en günceli çekebilmesi için)
+            ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.APP_NAME }}:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
           build-args: | # We use build-args to set environment variables
@@ -131,8 +134,8 @@ jobs:
             APP_NAME=${{ env.APP_NAME }}
             DB_URL=spring_sec_asym_enc
             PG_DB_NAME=${{ secrets.PG_DB_NAME }}
-            PG_USERNAME=${{ secrets.PG_DB_USERNAME }}
-            PG_PASSWORD=${{ secrets.PG_DB_PASSWORD }}
+            PG_DB_USERNAME=${{ secrets.PG_DB_USERNAME }}
+            PG_DB_PASSWORD=${{ secrets.PG_DB_PASSWORD }}
             EOF
             
             rm -f docker-compose.dev.yml
