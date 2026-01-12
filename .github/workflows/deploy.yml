@@ -103,7 +103,6 @@ jobs:
           context: . # dot means root directory
           pull: true
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.APP_NAME }}:${{ steps.extract_version.outputs.VERSION }}
             ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.APP_NAME }}:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
