@@ -124,10 +124,10 @@ jobs:
             PG_PASSWORD=${{ secrets.PG_DB_PASSWORD }}
             EOF
             
-            rn docker-compose.dev.yml
+            rm -f docker-compose.dev.yml
             # Download docker-compose.dev.yml if it doesn't exist
-            if [! -f docker-compose.dev.yml ]; then
-              curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" -o docker-compose.dev.yml https://raw.githubusercontent.com/${{ github.repository }}/refs/heads/main/docker-compose.dev.yml
+            if [ ! -f docker-compose.dev.yml ]; then
+              curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" -L -o docker-compose.dev.yml https://raw.githubusercontent.com/${{ github.repository }}/refs/heads/main/docker-compose.dev.yml
             fi
             
             # Pull the latest image
