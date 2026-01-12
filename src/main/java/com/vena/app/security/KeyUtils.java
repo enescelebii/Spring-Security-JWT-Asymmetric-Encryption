@@ -38,12 +38,20 @@ public class KeyUtils {
     }
 
 
-    private static String readKeyFromResource(String pemPath) throws Exception{
-            try (final InputStream is = KeyUtils.class.getClassLoader().getResourceAsStream(pemPath)){
-                if (is == null){
-                    throw new IllegalArgumentException("Key file not found" + pemPath);
-                }
-                return new String(is.readAllBytes());
+    private static String readKeyFromResource(String pemPath) throws Exception {
+        // Try to read from external path
+        java.nio.file.Path externalPath = java.nio.file.Paths.get("/app", pemPath);
+
+        if (java.nio.file.Files.exists(externalPath)) {
+            return java.nio.file.Files.readString(externalPath);
+        }
+
+        // Try to read from resource path
+        try (final InputStream is = KeyUtils.class.getClassLoader().getResourceAsStream(pemPath)) {
+            if (is == null) {
+                throw new IllegalArgumentException("Key file not found at external path (" + externalPath + ") or resource path (" + pemPath + ")");
             }
+            return new String(is.readAllBytes());
+        }
     }
 }
