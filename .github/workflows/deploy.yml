@@ -101,7 +101,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: . # dot means root directory
-          pull: true
+          push: true
           tags: |
             ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.APP_NAME }}:latest
           cache-from: type=gha
