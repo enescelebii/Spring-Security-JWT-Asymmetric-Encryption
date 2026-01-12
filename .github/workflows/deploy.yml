@@ -40,7 +40,7 @@ jobs:
           key: ${{ runner.os }}-m2-${{hashFiles('**/pom.xml')}}
           restore-keys: ${{ runner.os }}-m2
 
-      # give permissions to execute scripts
+      # give permissions to mvnw
       - name: Permission for mvnw
         run: chmod +x ./mvnw
 
@@ -78,6 +78,10 @@ jobs:
         # We use the maven exec plugin to extract the project version
         run: |
           echo "VERSION=$(./mvnw -q -Dexec.executable='echo' -Dexec.args='${project.version}' --non-recursive exec:exec)" >> $GITHUB_OUTPUT
+
+      # give permissions to mvnw
+      - name: Permission for mvnw
+        run: chmod +x ./mvnw
 
       - name: Build application
         run: ./mvnw clean package -DskipTests
