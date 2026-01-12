@@ -10,9 +10,9 @@
 	</parent>
 	<groupId>com.vena</groupId>
 	<artifactId>spring-security-asymmetric-encryption</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-security-asymmetric-encryption</name>
-	<description>spring-security-asymmetric-encryption</description>
+	<version>1.0.0</version>
+	<name>task-flow</name>
+	<description>Task Flows App Spring-security-asymmetric-encryption</description>
 	<url/>
 	<licenses>
 		<license/>
