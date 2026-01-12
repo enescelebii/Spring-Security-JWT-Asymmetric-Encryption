@@ -49,6 +49,8 @@ Now you have:
 ---
 
 ## ✅ Summary
+<img width="1481" height="574" alt="image" src="https://github.com/user-attachments/assets/a78d57ed-fb31-4d28-a0f3-2dad32b67915" />
+
 
 - Asymmetric encryption is **essential for secure JWT authentication**, especially in distributed systems or when exposing public APIs.
 - It separates the concerns of **signing (server-only)** and **verification (client/multiple services)**.
