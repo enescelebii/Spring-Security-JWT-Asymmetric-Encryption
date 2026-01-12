@@ -36,6 +36,6 @@ build/
 .env
 
 ### Pem ###
-*.pem
+#*.pem
 # Veya klasör bazlı kesin çözüm
-src/main/resources/keys/
+#src/main/resources/keys/
