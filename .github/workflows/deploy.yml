@@ -121,7 +121,9 @@ jobs:
           #  passphrase: ${{ secrets.VPS_SSH_KEY_PASSPHRASE }} we do not have a passphrase
           script: |
             # Navigate to app directory 
-            cd /opt/${{ env.APP_NAME }} || mkdir -p /opt/${{ env.APP_NAME }} && cd /opt/${{ env.APP_NAME }}
+            sudo mkdir -p /opt/${{ env.APP_NAME }}
+            sudo chown -R ${{ secrets.VPS_USERNAME }}:${{ secrets.VPS_USERNAME }} /opt/${{ env.APP_NAME }}
+            cd /opt/${{ env.APP_NAME }}
             
             # Create .env file with environment variables
             cat > .env << EOF
