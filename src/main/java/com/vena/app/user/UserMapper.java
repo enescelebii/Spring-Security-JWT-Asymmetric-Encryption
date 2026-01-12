@@ -2,11 +2,19 @@ package com.vena.app.user;
 
 import com.vena.app.auth.request.RegistrationRequest;
 import com.vena.app.user.request.ProfileUpdateRequest;
+import lombok.RequiredArgsConstructor;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.Objects;
+
 @Service
+@RequiredArgsConstructor
 public class UserMapper {
+
+    private final PasswordEncoder passwordEncoder;
+
     public void mergeUserInfo(final User user, final ProfileUpdateRequest request) {
         if (StringUtils.isNotBlank(request.getFirstName())
                 && !user.getFirstName().equals(request.getFirstName())) {
@@ -16,8 +24,7 @@ public class UserMapper {
                 && !user.getLastName().equals(request.getLastName())) {
             user.setLastName(request.getLastName());
         }
-        if (request.getDateOfBirth() != null
-                && !user.getDateOfBirth().equals(request.getDateOfBirth())){
+        if (request.getDateOfBirth() != null && !Objects.equals(user.getDateOfBirth(), request.getDateOfBirth())){
             user.setDateOfBirth(request.getDateOfBirth());
         }
     }
@@ -28,7 +35,7 @@ public class UserMapper {
                 .lastName(request.getLastName())
                 .email(request.getEmail())
                 .phoneNumber(request.getPhoneNumber())
-                .password(request.getPassword())
+                .password(this.passwordEncoder.encode(request.getPassword()))
                 // it can be done by after verification email
                 .enabled(true)
                 .locked(false)
