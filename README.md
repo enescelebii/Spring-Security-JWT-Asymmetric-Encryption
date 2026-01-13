@@ -8,7 +8,7 @@
 
 A production-ready implementation of **Asymmetric Encryption (RSA)** for JWT Authentication using Spring Boot 3. This project demonstrates how to sign tokens with a Private Key and verify them with a Public Key, deployed on **Oracle Cloud VPS** via a fully automated **CI/CD pipeline**.
 
-Live site: http://springbootencrypt.duckdns.org:8080/
+Live site:http://129.159.220.126:8080/
 
 <img width="1152" height="469" alt="image" src="https://github.com/user-attachments/assets/1958907d-cab3-483f-a0fa-aeee874279d8" />
 <img width="1222" height="1136" alt="image" src="https://github.com/user-attachments/assets/56c0bf54-9c2b-4b70-b3f3-75845511db3c" />
