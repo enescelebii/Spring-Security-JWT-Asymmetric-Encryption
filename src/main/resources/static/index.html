@@ -61,7 +61,131 @@
 
 
 
-<section id="projects" class="py-12 max-w-6xl mx-auto px-6">
+<section id="microservices-k8s-angular" class="py-12 max-w-6xl mx-auto px-6">
+    <div class="bg-gradient-to-br from-indigo-900/40 to-slate-900
+              p-8 md:p-12 rounded-3xl
+              border border-indigo-500/20
+              shadow-2xl hover:shadow-indigo-500/10
+              transition-all duration-300 hover:-translate-y-1">
+        <div class="flex flex-col md:flex-row gap-10 items-center">
+
+            <!-- LEFT CONTENT -->
+            <div class="flex-1">
+        <span class="text-indigo-400 font-bold mb-2 block tracking-tighter italic text-sm">
+          Cloud-Native & Dağıtık Sistemler
+        </span>
+
+                <h3 class="text-3xl font-bold mb-4">
+                    Microservices with Kubernetes & Angular
+                </h3>
+
+                <p class="text-gray-300 text-base mb-6">
+                    Tam yığın bir e-ticaret mikroservis sistemi: Spring Boot tabanlı hizmetler, Angular frontend,
+                    asenkron olay akışı için Kafka, merkezi kimlik yönetimi Keycloak ve Kubernetes ile orkestrasyon.
+                    Sistem, containerize edilip Docker/Kubernetes üzerinden çalışacak şekilde yapılandırılmıştır.
+                </p>
+
+                <ul class="grid grid-cols-1 gap-3 text-sm text-gray-300 mb-6">
+                    <li><b class="text-indigo-400">Core Services:</b> Product, Order, Inventory, Notification (ayrı microservice’ler).</li>
+                    <li><b class="text-indigo-400">Service Discovery & Gateway:</b> Spring Cloud Netflix Eureka + Spring Cloud Gateway.</li>
+                    <li><b class="text-indigo-400">Security:</b> Keycloak (OAuth2 / OpenID Connect) ile merkezi kimlik yönetimi.</li>
+                    <li><b class="text-indigo-400">Messaging & Resilience:</b> Apache Kafka ile event-driven iletişim; Resilience4J ile circuit breaker.</li>
+                    <li><b class="text-indigo-400">Persistence:</b> MySQL ve MongoDB (servise göre ayrılmış veri katmanları).</li>
+                    <li><b class="text-indigo-400">Observability:</b> OpenTelemetry + Prometheus, Grafana/Tempo/Loki için izleme ve tracing.</li>
+                </ul>
+                <!-- PROJECT LINK -->
+                <a href="https://github.com/enescelebii/Microservices-with-Kubernetes-and-Angular"
+                   target="_blank"
+                   class="inline-flex items-center gap-2 px-5 py-2.5
+                  rounded-xl bg-indigo-600/90 hover:bg-indigo-600
+                  text-sm font-semibold transition">
+                    View Project on GitHub
+                </a>
+            </div>
+
+            <!-- RIGHT CONTENT: Snapshot -->
+            <div class="flex-1 w-full bg-slate-900/70 rounded-2xl border border-indigo-500/20 p-6 shadow-inner">
+                <h4 class="text-sm text-indigo-300 font-semibold mb-5 uppercase tracking-wider">
+                    Production Readiness Snapshot
+                </h4>
+
+                <div class="grid grid-cols-1 gap-4 text-sm text-gray-300">
+
+                    <!-- ITEM -->
+                    <div class="flex items-start gap-3">
+                        <span class="mt-1 h-3 w-3 rounded-full bg-emerald-400 ring-2 ring-emerald-400/20"></span>
+                        <div>
+                            <p class="font-semibold text-white">Service Discovery & Routing</p>
+                            <p class="text-gray-400 text-xs">
+                                Eureka ile servis keşfi; API Gateway üzerinden merkezi yönlendirme ve filtreleme.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- ITEM -->
+                    <div class="flex items-start gap-3">
+                        <span class="mt-1 h-3 w-3 rounded-full bg-emerald-400 ring-2 ring-emerald-400/20"></span>
+                        <div>
+                            <p class="font-semibold text-white">Event-Driven Integration</p>
+                            <p class="text-gray-400 text-xs">
+                                Kafka tabanlı asenkron iletişim — sipariş ve bildirim akışları için uygun.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- ITEM -->
+                    <div class="flex items-start gap-3">
+                        <span class="mt-1 h-3 w-3 rounded-full bg-emerald-400 ring-2 ring-emerald-400/20"></span>
+                        <div>
+                            <p class="font-semibold text-white">Centralized Auth (Keycloak)</p>
+                            <p class="text-gray-400 text-xs">
+                                OAuth2/OpenID Connect ile token tabanlı güvenlik, yetkilendirme ve rol yönetimi.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- ITEM -->
+                    <div class="flex items-start gap-3">
+                        <span class="mt-1 h-3 w-3 rounded-full bg-emerald-400 ring-2 ring-emerald-400/20"></span>
+                        <div>
+                            <p class="font-semibold text-white">Resilience & Fault Tolerance</p>
+                            <p class="text-gray-400 text-xs">
+                                Resilience4J ile circuit breaker modelleri uygulanmış; servis bağımlılıklarında yumuşama.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- ITEM -->
+                    <div class="flex items-start gap-3">
+                        <span class="mt-1 h-3 w-3 rounded-full bg-emerald-400 ring-2 ring-emerald-400/20"></span>
+                        <div>
+                            <p class="font-semibold text-white">Observability & Tracing</p>
+                            <p class="text-gray-400 text-xs">
+                                OpenTelemetry + Prometheus/Grafana/Tempo/Loki ile metrik, log ve dağıtık trace yakalama.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- ITEM -->
+                    <div class="flex items-start gap-3">
+                        <span class="mt-1 h-3 w-3 rounded-full bg-emerald-400 ring-2 ring-emerald-400/20"></span>
+                        <div>
+                            <p class="font-semibold text-white">Containerization & Orchestration</p>
+                            <p class="text-gray-400 text-xs">
+                                Docker + docker-compose örnekleri ve Kubernetes manifestleri (k8s klasörü) ile orkestrasyon hazır.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section id="Spring-Security-JWT-Asymmetric-Encryption" class="py-12 max-w-6xl mx-auto px-6">
     <div class="bg-gradient-to-br from-indigo-900/40 to-slate-900
             p-8 md:p-12 rounded-3xl
             border border-indigo-500/20
@@ -85,11 +209,21 @@
                     uygulanmasını kapsayan bir sistem çalışmasıdır.
                 </p>
 
-                <ul class="grid grid-cols-1 gap-3 text-sm text-gray-300">
+                <ul class="grid grid-cols-1 gap-3 text-sm text-gray-300 mb-6">
                     <li><b class="text-indigo-400">OCI VPS:</b> Ubuntu tabanlı güvenli sunucu konfigürasyonu</li>
                     <li><b class="text-indigo-400">RSA JWT:</b> Asimetrik anahtarlarla token doğrulama</li>
                     <li><b class="text-indigo-400">Docker:</b> İzole servis ve veritabanı mimarisi</li>
                 </ul>
+
+                <!-- PROJECT LINK -->
+                <a href="https://github.com/enescelebii/Spring-Security-JWT-Asymmetric-Encryption"
+                   target="_blank"
+                   class="inline-flex items-center gap-2 px-5 py-2.5
+                  rounded-xl bg-indigo-600/90 hover:bg-indigo-600
+                  text-sm font-semibold transition">
+                    View Project on GitHub
+                </a>
+
             </div>
 
             <div class="flex-1 w-full bg-slate-900/70 rounded-2xl border border-indigo-500/20 p-6 shadow-inner">
@@ -162,6 +296,114 @@
     </div>
 </section>
 
+<section id="microservice-ecommerce" class="py-12 max-w-6xl mx-auto px-6">
+    <div class="bg-gradient-to-br from-indigo-900/40 to-slate-900
+              p-8 md:p-12 rounded-3xl
+              border border-indigo-500/20
+              shadow-2xl hover:shadow-indigo-500/10
+              transition-all duration-300 hover:-translate-y-1">
+        <div class="flex flex-col md:flex-row gap-10 items-center">
+
+            <!-- LEFT CONTENT -->
+            <div class="flex-1">
+        <span class="text-indigo-400 font-bold mb-2 block tracking-tighter italic text-sm">
+          Microservices Architecture
+        </span>
+
+                <h3 class="text-3xl font-bold mb-4">
+                    Microservice E-Commerce Application
+                </h3>
+
+                <p class="text-gray-300 text-base mb-6">
+                    Spring Boot ve Spring Cloud ekosistemi kullanılarak geliştirilmiş,
+                    domain bazlı ayrıştırılmış servislerden oluşan bir e-ticaret mikroservis mimarisidir.
+                    Sistem; API Gateway, Service Discovery, merkezi konfigürasyon ve
+                    asenkron mesajlaşma prensipleri dikkate alınarak tasarlanmıştır.
+                </p>
+
+                <ul class="grid grid-cols-1 gap-3 text-sm text-gray-300 mb-6">
+                    <li><b class="text-indigo-400">Core Services:</b> Product, Order, Inventory, Notification</li>
+                    <li><b class="text-indigo-400">API Gateway:</b> Spring Cloud Gateway ile merkezi istek yönetimi</li>
+                    <li><b class="text-indigo-400">Service Discovery:</b> Netflix Eureka ile dinamik servis keşfi</li>
+                    <li><b class="text-indigo-400">Async Messaging:</b> Apache Kafka ile event-driven yapı</li>
+                    <li><b class="text-indigo-400">Data Layer:</b> MySQL & MongoDB (service-per-database yaklaşımı)</li>
+                </ul>
+
+                <!-- PROJECT LINK -->
+                <a href="https://github.com/enescelebii/microservice-e-commerce-app"
+                   target="_blank"
+                   class="inline-flex items-center gap-2 px-5 py-2.5
+                  rounded-xl bg-indigo-600/90 hover:bg-indigo-600
+                  text-sm font-semibold transition">
+                    View Project on GitHub
+                </a>
+            </div>
+
+            <!-- RIGHT CONTENT -->
+            <div class="flex-1 w-full bg-slate-900/70 rounded-2xl border border-indigo-500/20 p-6 shadow-inner">
+                <h4 class="text-sm text-indigo-300 font-semibold mb-5 uppercase tracking-wider">
+                    Production Readiness Snapshot
+                </h4>
+
+                <div class="grid grid-cols-1 gap-4 text-sm text-gray-300">
+
+                    <div class="flex items-start gap-3">
+                        <span class="mt-1 h-3 w-3 rounded-full bg-green-400 ring-2 ring-green-400/20"></span>
+                        <div>
+                            <p class="font-semibold text-white">Domain-Based Microservices</p>
+                            <p class="text-gray-400 text-xs">
+                                Her servis kendi iş alanına ve veri modeline sahiptir.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3">
+                        <span class="mt-1 h-3 w-3 rounded-full bg-green-400 ring-2 ring-green-400/20"></span>
+                        <div>
+                            <p class="font-semibold text-white">Centralized API Gateway</p>
+                            <p class="text-gray-400 text-xs">
+                                Routing, load balancing ve cross-cutting concern’ler gateway üzerinden yönetilir.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3">
+                        <span class="mt-1 h-3 w-3 rounded-full bg-green-400 ring-2 ring-green-400/20"></span>
+                        <div>
+                            <p class="font-semibold text-white">Service Discovery</p>
+                            <p class="text-gray-400 text-xs">
+                                Eureka sayesinde servis adresleri runtime’da dinamik olarak çözülür.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3">
+                        <span class="mt-1 h-3 w-3 rounded-full bg-green-400 ring-2 ring-green-400/20"></span>
+                        <div>
+                            <p class="font-semibold text-white">Event-Driven Communication</p>
+                            <p class="text-gray-400 text-xs">
+                                Kafka ile senkron bağımlılıklar azaltılmıştır.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3">
+                        <span class="mt-1 h-3 w-3 rounded-full bg-green-400 ring-2 ring-green-400/20"></span>
+                        <div>
+                            <p class="font-semibold text-white">Scalability-Oriented Design</p>
+                            <p class="text-gray-400 text-xs">
+                                Her servis bağımsız ölçeklenebilir olacak şekilde kurgulanmıştır.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
 
 <section class="py-14 bg-slate-800/30">
     <div class="max-w-6xl mx-auto px-6">
@@ -189,7 +431,7 @@
             border border-indigo-500/40
             shadow-lg shadow-indigo-500/10
             hover:border-indigo-400 transition">
-                <i class="fas fa-network-wired text-4xl text-indigo-400 mb-4 block"></i>
+                <i class="fas fa-cubes text-4xl text-indigo-400 mb-4 block"></i>
                 <h4 class="font-semibold text-sm mb-1">Microservices</h4>
                 <p class="text-xs text-gray-400">
                     Eureka · OpenFeign · Gateway
@@ -201,7 +443,7 @@
             border border-indigo-500/40
             shadow-lg shadow-indigo-500/10
             hover:border-indigo-400 transition">
-                <i class="fas fa-stream text-4xl text-pink-500 mb-4 block"></i>
+                <i class="fas fa-paper-plane text-4xl text-pink-500 mb-4 block"></i>
                 <h4 class="font-semibold text-sm mb-1">Event Streaming</h4>
                 <p class="text-xs text-gray-400">
                     Apache Kafka · Async Processing
@@ -249,7 +491,10 @@
             border border-indigo-500/40
             shadow-lg shadow-indigo-500/10
             hover:border-indigo-400 transition">
-                <i class="fab fa-docker text-4xl text-blue-400 mb-4 block"></i>
+                <div class="flex items-center gap-4 mb-4">
+                    <i class="fab fa-docker text-4xl text-blue-400"></i>
+                    <i class="fas fa-dharmachakra text-4xl text-blue-600"></i>
+                </div>
                 <h4 class="font-semibold text-sm mb-1">Containers</h4>
                 <p class="text-xs text-gray-400">
                     Docker · Docker Compose · Kubernetes
@@ -261,7 +506,7 @@
             border border-indigo-500/40
             shadow-lg shadow-indigo-500/10
             hover:border-indigo-400 transition">
-                <i class="fas fa-infinity text-4xl text-purple-500 mb-4 block"></i>
+                <i class="fas fa-code-branch text-4xl text-purple-500 mb-4 block"></i>
                 <h4 class="font-semibold text-sm mb-1">CI / CD</h4>
                 <p class="text-xs text-gray-400">
                     GitHub Actions · Automation
@@ -272,6 +517,104 @@
     </div>
 </section>
 
+<section id="system-design-thinking" class="py-12 max-w-6xl mx-auto px-6">
+    <div class="bg-gradient-to-br from-slate-900 to-slate-950
+              p-8 md:p-12 rounded-3xl
+              border border-slate-700/40
+              shadow-2xl transition-all duration-300">
+
+        <span class="text-indigo-400 font-bold mb-2 block tracking-tighter italic text-sm">
+            Architecture & System Design
+        </span>
+
+        <h3 class="text-3xl font-bold mb-6">
+            System Design & Architectural Decisions
+        </h3>
+
+        <p class="text-gray-300 text-base mb-8 max-w-3xl">
+            Geliştirdiğim sistemlerde odak noktam yalnızca kod yazmak değil; ölçeklenebilirlik,
+            dayanıklılık ve operasyonel sürdürülebilirliği baştan tasarlamaktır.
+            Aşağıdaki kararlar, mikroservis projelerimde bilinçli olarak tercih edilmiştir.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-gray-300">
+
+            <!-- ITEM -->
+            <div class="bg-slate-900/60 border border-slate-700/40 rounded-2xl p-5">
+                <h4 class="font-semibold text-white mb-2">
+                    Microservices vs Monolith
+                </h4>
+                <p class="text-gray-400 text-xs leading-relaxed">
+                    Domain sınırları net olan, bağımsız ölçeklenmesi gereken ve farklı veri
+                    modellerine sahip bileşenler için mikroservis tercih edildi.
+                    Küçük, hızlı değişen ve operasyonel yükü düşük sistemlerde monolith daha
+                    uygun olabilirdi.
+                </p>
+            </div>
+
+            <!-- ITEM -->
+            <div class="bg-slate-900/60 border border-slate-700/40 rounded-2xl p-5">
+                <h4 class="font-semibold text-white mb-2">
+                    API Gateway & Service Discovery
+                </h4>
+                <p class="text-gray-400 text-xs leading-relaxed">
+                    Client tarafını servis detaylarından izole etmek, merkezi güvenlik,
+                    routing ve rate limiting uygulamak için API Gateway kullanıldı.
+                    Dinamik ortamlar için Eureka ile servis keşfi sağlandı.
+                </p>
+            </div>
+
+            <!-- ITEM -->
+            <div class="bg-slate-900/60 border border-slate-700/40 rounded-2xl p-5">
+                <h4 class="font-semibold text-white mb-2">
+                    Event-Driven Communication
+                </h4>
+                <p class="text-gray-400 text-xs leading-relaxed">
+                    Senkron bağımlılıkları azaltmak ve sistemin gevşek bağlı (loosely coupled)
+                    olmasını sağlamak amacıyla Kafka ile asenkron mesajlaşma tercih edildi.
+                    Özellikle sipariş ve bildirim akışlarında kritik rol oynar.
+                </p>
+            </div>
+
+            <!-- ITEM -->
+            <div class="bg-slate-900/60 border border-slate-700/40 rounded-2xl p-5">
+                <h4 class="font-semibold text-white mb-2">
+                    Data Isolation per Service
+                </h4>
+                <p class="text-gray-400 text-xs leading-relaxed">
+                    Her mikroservisin kendi veritabanına sahip olması, servislerin bağımsız
+                    deploy edilebilmesini ve veri katmanında sıkı bağlılığın önlenmesini sağlar.
+                    MySQL ve MongoDB kullanımında bu prensip korunmuştur.
+                </p>
+            </div>
+
+            <!-- ITEM -->
+            <div class="bg-slate-900/60 border border-slate-700/40 rounded-2xl p-5">
+                <h4 class="font-semibold text-white mb-2">
+                    Resilience & Failure Handling
+                </h4>
+                <p class="text-gray-400 text-xs leading-relaxed">
+                    Dağıtık sistemlerde hata kaçınılmazdır.
+                    Resilience4J ile circuit breaker ve timeout stratejileri uygulanarak
+                    zincirleme servis çöküşlerinin önüne geçilmiştir.
+                </p>
+            </div>
+
+            <!-- ITEM -->
+            <div class="bg-slate-900/60 border border-slate-700/40 rounded-2xl p-5">
+                <h4 class="font-semibold text-white mb-2">
+                    Observability First Approach
+                </h4>
+                <p class="text-gray-400 text-xs leading-relaxed">
+                    Canlı sistemlerde debug edilebilirlik kritik olduğu için,
+                    OpenTelemetry ile distributed tracing; Prometheus ve Grafana ile
+                    metrik ve izleme altyapısı baştan tasarlanmıştır.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
 
 <footer class="py-10 border-t border-slate-800/60 text-center text-gray-500 text-sm">
     <p class="tracking-wide">
