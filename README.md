@@ -1,4 +1,4 @@
-# 🔐 Spring Security JWT with Asymmetric Encryption (RSA)
+# 🔐 Spring Security JWT with Asymmetric Encryption (RSA) 
 
 ![Java](https://img.shields.io/badge/Java-17-orange?style=for-the-badge&logo=java)
 ![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.x-green?style=for-the-badge&logo=spring-boot)
