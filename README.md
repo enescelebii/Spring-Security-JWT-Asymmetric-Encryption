@@ -94,11 +94,23 @@ openssl rsa -in private_key.pem -pubout -out public_key.pem
 
 # Go back to root
 cd ../..
+
+# Copy env.example to .env
+cp env.example .env
+# and change the values to match your environment
 ```
 
 ### 3. Run with Docker Compose
 ```bash
+# Login to Docker Hub
+docker login
+# be sure docker is running
+
+# Pull the images
 docker-compose -f docker-compose.dev.yml up -d --build
+
+# Check the status
+docker ps
 ```
 
 The application will start at `http://localhost:8080`.
