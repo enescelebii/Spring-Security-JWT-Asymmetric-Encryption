@@ -25,7 +25,7 @@ public class SecurityConfig {
             "/v3/api-docs",
             "/v3/api-docs/**",
             "/v2/api-docs",
-            "swagger-resources",
+            "/swagger-resources",
             "/swagger-resources/**",
             "/configuration/ui",
             "/configuration/security",
@@ -33,7 +33,15 @@ public class SecurityConfig {
             "/swagger-ui.html",
             "/webjars/**",
             "/",
-            "/index.html"
+            "/index.html",
+            "/profile.jpg",
+            "/favicon.ico",
+            "/*.png",
+            "/*.jpg",
+            "/*.jpeg",
+            "/*.svg",
+            "/*.css",
+            "/*.js"
     };
 
     private final JwtFilter jwtFilter;
